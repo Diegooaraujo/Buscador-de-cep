@@ -1,42 +1,101 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
+.conteiner{
+  height: 100vh;
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background:linear-gradient(#121212,#212b46) ;
+}
+.title{
+  font-size: 85px;
+  color: #fff;
+  animation: flipTitle 2s;
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@keyframes flipTitle{
+  from{
+    transform: rotateX(90deg);
+  }to{  
+    transform: rotateX(0deg);
   }
 }
 
-.card {
-  padding: 2em;
+.conteinerInput{
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  margin: 34px 0;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 1px 3px 8px rgba(0,0,0, 0.5);
+
 }
 
-.read-the-docs {
-  color: #888;
+.conteinerInput input{
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  outline: none;
+  margin-right: 8px;
+
+}
+
+/*alterar a cor do placeholder*/
+
+.conteinerInput input::placeholder{
+  color: #f1f1f1;
+}
+.buttonSearch{
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition:transform 0.5s;
+}
+.buttonSearch:hover{
+transform: scale(1.2);
+}
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  width: 500px;
+  border-radius: 8px;
+
+}
+
+.main h2{
+
+  margin: 16px 0;
+  font-size: 39px;
+}
+
+.main span{
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+@media (max-width:620px) {
+  .title{
+    font-size: 60px;
+  }
+  .main h2{
+    font-size: 28px;
+  }
+  .main{
+    width: 80%;
+    min-height: 250px;
+  }
 }
